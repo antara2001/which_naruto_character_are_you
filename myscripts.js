@@ -324,7 +324,7 @@ function msg(){
     else if(high==tsunade){
         document.write("tsunade") 
         window.location.href ="tsunade.html"
-        document.write("tsunade") 
+      
     }
     else if(high==kiba){
         document.write("kiba")
