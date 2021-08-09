@@ -1,0 +1,514 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin: 0%;
+}
+@font-face {
+  font-family: 'njnaruto';
+  src: url(njnaruto.ttf);
+}
+header{
+  /*background: rgb(226,15,15);
+  background: linear-gradient(135deg, rgba(226,15,15,1) 20%, rgba(179,12,215,1) 51%, rgba(11,48,230,1) 82%);*/
+  
+  background: rgb(0,0,0);
+  background: linear-gradient(135deg, rgba(234,152,40,1) 50%, rgba(14,13,13,1) 50%);
+
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+
+  border-style: solid;
+  border-width: 5px;
+  border-image: linear-gradient(135deg, rgba(14,13,13,1) 50%, rgba(234,152,40,1) 50%) 1;
+}
+
+/*Top card design starts here*/
+
+/*.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+.card {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    min-height: 250px;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 20px;
+    transition: all 0.2s;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+  }
+  
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+.card-1 {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+}
+  
+.card-2 {
+    background: radial-gradient(#fbc1cc, #fa99b2);
+}
+  
+.card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+}*/
+  
+/* RESPONSIVE(ignore this) */
+  
+@media (max-width: 1600px) {
+    .cards {
+      justify-content: center;
+    }
+}
+/*Top card design ends here*/
+
+/*Name input design*/
+input[type="text"]{
+    width: 50%;
+    padding: 12px;
+    border: 3px solid rgba(234,152,40,1);
+    border-radius: 5px;
+    margin: 0px;
+    
+}
+
+/*.Q{
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#blue_btn{
+    background-color: #000000;
+    border: none;
+    border-radius: 10px;
+    color: rgb(38, 80, 216);
+    padding: 15px 32px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+
+#blue_btn:hover{
+    cursor: pointer;
+    background-color: rgb(38, 80, 216);
+    color: white;
+}
+
+#blue_btn:focus{
+    background-color: rgb(38, 80, 216);
+    color: white;
+}
+
+#orange_btn{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    color: orange;
+    padding: 15px 32px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+
+#orange_btn:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+
+#orange_btn:focus{
+    background-color: orange;
+    color: white;
+}
+
+#pink_btn{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    color: rgb(243, 7, 125);
+    padding: 15px 32px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+
+#pink_btn:hover{
+    cursor: pointer;
+    background-color: rgb(243, 7, 125);
+    color: white;
+}
+
+#pink_btn:focus{
+    background-color: rgb(243, 7, 125);
+    color: white;
+}*/
+
+.questions{
+    margin-left: 10vh;
+}
+
+/*Question designs*/
+h1{
+    color: #d88110;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #d88110;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* SUBMIT button design */
+/* To center the stupid button*/
+.button_container{
+    text-align: center;
+    padding-top: 40px;
+}
+
+/*Hover sharingan effect, because why not*/
+#btn{
+    background-color: #d6790e;
+    border: none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 2em;
+    font-family: njnaruto;
+    width: 30%;
+    transition: all 0.3s;
+}
+
+#btn:hover{
+    cursor: pointer;
+
+    background-color: black;
+    color: #d6790e;
+
+    border: 1px solid rgba(19, 18, 18, 0.822);
+    box-shadow: inset 0 0 20px rgba(226, 115, 11, 0.767), 0 0 20px rgba(214, 99, 6, 0.267);
+    outline-color: rgba(230, 116, 10, 0.185);
+    outline-offset: 15px;
+}
+
+/*for the side arrow animation, I've no idea how it is working but it is working. I "BORROWED" it form w3, thank you w3! VERY CooL*/
+#btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: njnaruto;
+}
+
+#btn span:after {
+    content: '\00BB'; /*this thing creating the '>>' thing*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btn:hover span {
+    padding-right: 25px;
+}
+
+#btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*footer design and also responsive*/
+footer{
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: -10vh;
+  background: #222;
+  font-size: 16px;
+  font-family: 'Merienda', cursive;
+}
+footer .content{
+  max-width: 1350px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,a{
+  color: #fff;
+}
+footer .content .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic{
+  font-size: 23px;
+  font-weight: 600;
+  color: #d6790e;
+  margin-bottom: 12px;
+  font-family: 'Permanent Marker', cursive;
+}
+ 
+footer .content .upper1 {
+  padding-left: 16px;
+  padding-right: 29px;
+  
+}
+
+
+footer .content .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i{
+  padding-right: 16px;
+}
+footer .content .middle{
+  padding-left: 80px;
+}
+footer .content .middle a{
+  line-height: 32px;
+}
+footer .content .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #d6790e;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #d6790e;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover{
+  background: none;
+  color:  #d6790e;
+}
+
+@media (max-width:1100px) {
+  footer .content .middle{
+      padding-left: 50px;
+    }
+}
+@media (max-width:950px){
+  .questions{
+      margin-left: 3vh;
+  }
+  .questions h1{
+      font-size: 20px;
+  }
+  .questions .container{
+      font-size: 18px;
+  }
+  .questions  .name1 {
+      font-size: 24px;
+  }
+  .questions .name1 #name{
+      height: 10%;
+      width: 70%;
+      margin-top: 1vh;
+      font-size: 15px;
+  }
+  .button_container{
+      font-size: 70%;
+      
+    
+  }
+  .button_container #btn{
+      width: 30vh;
+      padding: 10px;
+  }
+  footer{
+      position: relative;
+      font-size: 80%;
+    }
+   
+  footer .content .box{
+    width: 50%;
+  }
+  .content .right{
+    margin-top: 40px;
+  }
+  .center{
+      width: 70%;
+      height: auto;
+  }
+  footer .content .topic{
+      font-size: 2.5vh;
+     
+  }
+  footer .content .right input[type="text"]{
+      height: 25px;
+      width: 70%;
+    
+      font-size: 13px;
+     
+    }
+    footer .content .right input[type="submit"]{
+      height: 25px;
+      width: 75%;
+      font-size: 13px;
+     
+     
+    }
+}
+@media (max-width:560px){
+  .questions{
+      margin-left: 3vh;
+  }
+  .questions h1{
+      font-size: 20px;
+  }
+  .questions .container{
+      font-size: 18px;
+  }
+  .questions  .name1 {
+      font-size: 19px;
+  }
+  .questions .name1 #name{
+      height: 10%;
+      width: 70%;
+      margin-top: 1vh;
+  }
+  .button_container{
+      font-size: 50%;
+      
+    
+  }
+  .button_container #btn{
+      width: 30vh;
+      padding: 10px;
+  }
+  footer{
+      position: relative;
+      font-size: 80%;
+    }
+    footer .content .box{
+      width: 100%;
+      margin-top: 10px;
+    }
+    footer .content .middle{
+      padding-left: 0;
+    }
+    .center{
+        width: 70%;
+        height: auto;
+    }
+    footer .content .topic{
+        font-size: 2.5vh;
+    }
+    footer .content .right input[type="text"]{
+      height: 25px;
+      width: 70%;
+      
+      font-size: 13px;
+     
+    }
+    footer .content .right input[type="submit"]{
+      height: 25px;
+      width: 75%;
+      font-size: 13px;
+     
+    }
+    
+}

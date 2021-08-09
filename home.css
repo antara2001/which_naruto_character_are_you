@@ -1,0 +1,337 @@
+body{
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 30px;
+}
+@font-face {
+  font-family: 'njnaruto';
+  src: url(njnaruto.ttf);
+}
+header{
+    /*background: rgb(226,15,15);
+    background: linear-gradient(135deg, rgba(226,15,15,1) 20%, rgba(179,12,215,1) 51%, rgba(11,48,230,1) 82%);*/
+    
+    background: rgb(0,0,0);
+    background: linear-gradient(125deg, rgba(0,0,0,1) 50%, rgba(210,127,19,1) 50%);
+
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.center{
+    /*To center the image/gif*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*Gradient border*/
+    border-style: solid;
+    border-width: 5px;
+    border-image: linear-gradient(125deg, rgba(255,136,0,1) 50%, rgba(0,0,0,1) 50%) 1;
+
+    /*Shadow possession jutsu for a 3D efect*/
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    box-shadow: 10px 10px 5px rgb(32, 30, 30);
+}
+
+.intro{
+    display: block;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+
+    background-color: #222;
+    color: white;
+    font-size: 22px;
+    font-family: 'Merienda', cursive;
+
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(135deg, rgba(236,113,6,1) 25%, rgba(42,37,37,1) 69%) 1;
+
+    box-shadow: 10px 5px 10px rgba(228, 106, 7, 0.308);
+    transition: 0.3s;
+    width: 80%;
+
+}
+
+.intro:hover {
+    box-shadow: 20px 10px 100px rgba(207, 88, 8, 0.418);
+}
+
+.letsstart{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+/* To center the stupid button*/
+.button_container{
+    text-align: center;
+    padding-top: 40px;
+}
+
+/*Hover sharingan effect, because why not*/
+#btn{
+    background-color: #d6790e;
+    border: none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 2em;
+   
+    width: 30%;
+    transition: all 0.3s;
+}
+
+#btn:hover{
+    cursor: pointer;
+
+    background-color: black;
+    color: #d6790e;
+    font-family: njnaruto;
+    border: 1px solid rgba(19, 18, 18, 0.822);
+    box-shadow: inset 0 0 20px rgba(226, 115, 11, 0.767), 0 0 20px rgba(214, 99, 6, 0.267);
+    outline-color: rgba(230, 116, 10, 0.185);
+    outline-offset: 15px;
+}
+
+/*for the side arrow animation, I've no idea how it is working but it is working. I "BORROWED" it form w3, thank you w3! VERY CooL*/
+#btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: njnaruto;
+}
+
+#btn span:after {
+    content: '\00BB'; /*this thing creating the '>>' thing*/
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btn:hover span {
+    padding-right: 25px;
+}
+
+#btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+footer{
+    width: 100%;
+   margin-top: 10vh;
+   margin-bottom: -10vh;
+    left: 0;
+    background: #222;
+    font-size: 16px;
+    font-family: 'Merienda', cursive;
+  }
+  footer .content{
+    max-width: 1350px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content p,a{
+    color: #fff;
+  }
+  footer .content .box{
+    width: 33%;
+    transition: all 0.4s ease;
+   
+   
+  }
+  footer .content .topic{
+    font-size: 23px;
+    font-weight: 600;
+    color: #d6790e;
+    margin-bottom: 12px;
+    font-family: 'Permanent Marker', cursive;
+   
+  
+  }
+ 
+
+   
+  footer .content .upper1 {
+    padding-left: 16px;
+    padding-right: 29px;
+    
+  }
+
+  
+  footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+  }
+  footer .content .lower i{
+    padding-right: 16px;
+  }
+  footer .content .middle{
+    padding-left: 80px;
+  }
+  footer .content .middle a{
+    line-height: 32px;
+  }
+  footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    background: #000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+  }
+  footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #d9d9d9;
+    background: #d6790e;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #d6790e;
+    transition: all 0.3s ease-in-out;
+  }
+  .content .right input[type="submit"]:hover{
+    background: none;
+    color:  #d6790e;
+  }
+  
+  /* footer .bottom{
+    width: 100%;
+    text-align: right;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+  } */
+  /* footer .bottom a{
+    color: #eb2f06;
+  }
+  footer a{
+    transition: all 0.3s ease;
+  }
+  footer a:hover{
+    color: #eb2f06;
+  } */
+  @media (max-width:1100px) {
+    footer .content .middle{
+      padding-left: 50px;
+    }
+  }
+  @media (max-width:950px){
+    footer{
+        position: relative;
+        font-size: 80%;
+      }
+     
+    footer .content .box{
+      width: 50%;
+    }
+    .content .right{
+      margin-top: 40px;
+    }
+    .center{
+        width: 70%;
+        height: auto;
+    }
+    footer .content .topic{
+        font-size: 2.5vh;
+       
+    }
+    .intro{
+        margin-top: 4vh;
+        width: 80%;
+        padding: 20px;
+        font-size: 80%;
+    }
+    .letsstart{
+        font-size: 3vh;
+    }
+    #btn{
+      font-size: 20px;
+     padding: 10px;
+     margin-top: -30px;
+    }
+    footer .content .right input[type="text"]{
+        height: 25px;
+        width: 70%;
+      
+        font-size: 13px;
+       
+      }
+      footer .content .right input[type="submit"]{
+        height: 25px;
+        width: 75%;
+        font-size: 13px;
+       
+       
+      }
+   
+     
+  }
+  @media (max-width:560px){
+    footer{
+      position: relative;
+      font-size: 80%;
+    }
+    footer .content .box{
+      width: 100%;
+      margin-top: 10px;
+    }
+    footer .content .middle{
+      padding-left: 0;
+    }
+    .center{
+        width: 70%;
+        height: auto;
+    }
+    footer .content .topic{
+        font-size: 2.5vh;
+    }
+    .intro{
+        margin-top: 4vh;
+        width: 80%;
+        padding: 20px;
+        font-size: 70%;
+    }
+    .letsstart{
+        font-size: 2vh;
+    }
+    #btn{
+      font-size: 20px;
+     padding: 10px;
+     margin-top: -30px;
+    }
+    footer .content .right input[type="text"]{
+        height: 25px;
+        width: 70%;
+        
+        font-size: 13px;
+       
+      }
+      footer .content .right input[type="submit"]{
+        height: 25px;
+        width: 75%;
+        font-size: 13px;
+       
+      }
+      
+     
+  }
+  

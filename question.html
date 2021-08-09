@@ -1,0 +1,301 @@
+<!--
+  --Update--
+  FOR HTML:
+  added value="" to every radio input
+  added required so user have to answer all the questions
+  added the home page START button
+
+  added id to the input options
+  added footer to both home.html and index.html
+  added a place holder in the name input
+  added a header in index.html 
+  FOR CSS:
+  added the home page START button design
+  added footer design
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Naruto Character Are You?</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="myscripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel = "icon" href = "http://icons.iconseeker.com/png/fullsize/naruto-vol-1/uzumaki-naruto.png"   type = "image/x-icon">
+
+</head>
+<body>
+
+    <!--Top Cards-->
+    <!--<div class="cards">
+        <div class="card card-1">
+          <div class="card__icon"><i class="fas fa-bolt"></i></div>
+          <p class="card__exit"><i class="fas fa-times"></i></p>
+          <h2 class="card__title">Answer the questions honestly</h2>
+        </div>
+        <div class="card card-2">
+          <div class="card__icon"><i class="fas fa-bolt"></i></div>
+          <p class="card__exit"><i class="fas fa-times"></i></p>
+          <h2 class="card__title">View detailed result</h2>
+        </div>
+        <div class="card card-3">
+          <div class="card__icon"><i class="fas fa-bolt"></i></div>
+          <p class="card__exit"><i class="fas fa-times"></i></p>
+          <h2 class="card__title">Have fun</h2>
+        </div>
+    </div>-->
+
+    <!--<p class="using_fieldsets">
+        <fieldset>
+            <legend>Favourite Color</legend><br> 
+            blue<input type="radio" name="personality" id="blue" required>
+            orange<input type="radio" name="personality" id="orange" required>
+            pink<input type="radio" name="personality" id="pink" required> 
+        </fieldset>
+    </p>-->
+
+    <!--<p class="using_buttons">
+        <div class="Q"> Favourite Color </div>
+        <button id="blue_btn"> Blue </button>
+        <button id="orange_btn"> Orange </button>
+        <button id="pink_btn"> Pink </button>
+    </p>-->
+    
+    <!--Demo-->
+    <!--<h1>Favourite Color</h1>
+    <label class="container">One
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+    </label>
+    <label class="container">Two
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+    </label>
+    <label class="container">Three
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+    </label>
+    <label class="container">Four
+    <input type="radio" name="radio">
+    <span class="checkmark"></span>
+    </label>-->
+   
+    <header>
+      <img src="question_page_header.jpeg" height="450px" class="center">
+    </header>
+
+    <div class="questions">
+      <form method="POST">
+        
+        <!--User name for result display-->
+        <!--{% csrf_token %}-->
+        <p style="font-size: 30px; color: #d6790e; font-family: njnaruto">Nick name: &nbsp; <input type="text" style="font-family: njnaruto;" id="name" name="name" placeholder="Your name..." required></p>
+
+        <!--Q1-->
+        <h1>How would you describe your personality?</h1>
+        <label class="container">Introvert
+        <input type="radio" name="personality" value="introvert" id="introvert" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Ambivert
+        <input type="radio" name="personality" value="ambivert" id="ambivert">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Extrovert
+        <input type="radio" name="personality" value="extrovert" id="extrovert">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q2-->
+        <h1>How do you like to deal with a situation?</h1>
+        <label class="container">Make a plan and then deal with it
+        <input type="radio" name="situation" value="preplanner" id="preplanner" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Making a plan on the spot
+        <input type="radio" name="situation" value="onspotplanner" id="onspotplanner">
+        <span class="checkmark"></span>
+        </label>
+        
+
+        <!--Q3-->
+        <h1>Do you like pets?</h1>
+        <label class="container">Yes
+        <input type="radio" name="pet" value="likepet" id="likepet" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">No
+        <input type="radio"name="pet" value="notlikepet" id="notlikepet">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q4-->
+        <h1>What is your favourite color?</h1>
+        <label class="container">Black
+        <input type="radio" name="color" value="black" id="black" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Blue
+        <input type="radio" name="color" value="blue" id="blue">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Pink
+        <input type="radio" name="color" value="pink" id="pink">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q5-->
+        <h1>What is the most important thing in life?</h1>
+        <label class="container">Family
+        <input type="radio" name="life" value="family" id="family" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Friends
+        <input type="radio" name="life" value="friends" id="friends">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Money
+        <input type="radio" name="life" value="money" id="money">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q6-->
+        <h1>What kind of student were/are you?</h1>
+        <label class="container">Smart and active
+        <input type="radio" name="student" value="smartactive" id="smartactive" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Lazy but smart
+        <input type="radio" name="student" value="lazysmart" id="lazysmart">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Normal
+        <input type="radio" name="student" value="normal" id="normal">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Backbencher
+        <input type="radio" name="student" value="backbencher" id="backbencher">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q7-->
+        <h1>Which of the personality traits describes how you are around your family and close friends?</h1>
+        <label class="container">Protective
+        <input type="radio" name="personality_friend" value="protective" id="protective" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Lazy 
+        <input type="radio" name="personality_friend" value="lazy" id="lazy">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Childish 
+        <input type="radio" name="personality_friend" value="childish" id="childish">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Quiet one
+        <input type="radio" name="personality_friend" value="quiet" id="quiet">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q8-->
+        <h1>What is your usual face expression?</h1>
+        <label class="container">Smile a lot 
+        <input type="radio" name="expression" value="smile" id="smile" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Frown 
+        <input type="radio" name="expression" value="frown" id="frown">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Hardly smile
+        <input type="radio" name="expression" value="hardly_smile" id="hardly_smile">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Don’t have a facial expression
+        <input type="radio" name="expression" value="no_expression" id="no_expression">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q9-->
+        <h1>According to you, what is your special power?</h1>
+        <label class="container">Stamina and determination 
+        <input type="radio" name="special_power" value="stamina_determination" id="stamina_determination" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Quick analytical mind
+        <input type="radio" name="special_power" value="quick_mind" id="quick_mind">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Speed
+        <input type="radio" name="special_power" value="speed" id="speed">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Power
+        <input type="radio" name="special_power" value="power" id="power">
+        <span class="checkmark"></span>
+        </label>
+
+        <!--Q10-->
+        <h1>If you are on a top secret S rank ninja mission and two of your friends are in danger, and you can only save one, what will you do?</h1>
+        <label class="container">Sacrifice your friends and complete the mission for the greater good 
+        <input type="radio" name="sacrifice" value="complete_mission" id="complete_mission" required>
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Save the stronger one and carry on the mission
+        <input type="radio" name="sacrifice" value="save_stronger" id="save_stronger">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Abandon your mission and save your friends even if it costs your life
+        <input type="radio" name="sacrifice" value="save_friends" id="save_friends">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Run for your life
+        <input type="radio" name="sacrifice" value="run" id="run">
+        <span class="checkmark"></span>
+        </label>
+
+
+        <!--Submit button-->
+        <div class=button_container>
+           <button id="btn" onclick="msg()"> <span style="font-family: njnaruto;">Reveal Your Character</span> </button> 
+        </div>
+      </form>
+    </div>
+
+    <!--Index footer done by @missantara-->
+    <footer>
+      <div class="content">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic"> &nbsp; About us</div>
+            <p class="upper1">This is a website where you can find  which naruto character are you by answering all the  questions. </p>
+          </div>
+          <div class="lower">
+            <div class="topic"> &nbsp;Contact us</div>
+            <div class="phone">
+              <a href="mailto:missantaraghosh709@gmail.com"><i class="fas fa-phone-volume"></i>missantaraghosh709@gmail.com</a>
+            </div>
+            <div class="email">
+              <a href="mailto:arkadeep.paul19@gmail.com"><i class="fas fa-envelope"></i>arkadeep.paul19@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <div class="topic">&nbsp;Subscribe us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter email address">
+            <input type="submit" name="" value="Send">
+          </form>
+        </div>
+      </div> 
+    </footer>
+
+
+</body>
+</html>
