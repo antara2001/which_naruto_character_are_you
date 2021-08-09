@@ -262,17 +262,17 @@ function msg(){
     // document.write(hinata);
    
     if(high==naruto){
-       
+        document.write("naruto")
        window.location.href ="naruto.html" 
     }
     else if(high==sasuke){
-       
+        document.write("sasuke")
         window.location.href ="sasuke.html" 
         
     }
     
     else if(high==sakura){
-       
+        document.write("sakura")
         window.location.href ="sakura.html"
          
     }
@@ -282,62 +282,62 @@ function msg(){
         
     }
     else if(high==itachi){
-       
+        document.write("itachi")
         window.location.href ="itachi.html" 
        
     }
     else if(high==hinata){
-       
+        document.write("hinata") 
         window.location.href ="hinata.html"
        
     }
     else if(high==shikamaru){
-       
+        document.write("shikamaru")
         window.location.href ="shikamaru.html" 
       
     }
     else if(high==minato){
-       
+        document.write("minato") 
         window.location.href ="minato.html"
         
     }
     else if(high==shino){
-        
+        document.write("shino")
         window.location.href ="shino.html" 
        
     }
     else if(high==kushina){
-       
+        document.write("kushina") 
         window.location.href ="kushina.html"
        
     }
     else if(high==sage){
-       
+        document.write("sage")
         window.location.href ="sage.html" 
         
     }
     else if(high==guy){
-       
+        document.write("guy")
         window.location.href ="guy.html" 
        
     }
     else if(high==tsunade){
-        
+        document.write("tsunade") 
         window.location.href ="tsunade.html"
-       
+        document.write("tsunade") 
     }
     else if(high==kiba){
-       
+        document.write("kiba")
         window.location.href ="kiba.html" 
        
     }
     else if(high==ino){
-        
+        document.write("ino") 
         window.location.href ="ino.html"
        
     }
     else if(high==choji){
-      
+        document.write("choji") 
         window.location.href ="choji.html"
         
     }
